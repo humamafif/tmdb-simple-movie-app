@@ -2,13 +2,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/feature/movies/model/movie_model.dart';
 
-class HeaderCarousel extends StatefulWidget {
+class Carousel extends StatefulWidget {
   final List<MovieModel> reelsData;
   final CarouselSliderController controller;
   final int current;
   final ValueChanged<int> onPageChanged;
 
-  const HeaderCarousel({
+  const Carousel({
     super.key,
     required this.reelsData,
     required this.controller,
@@ -17,10 +17,10 @@ class HeaderCarousel extends StatefulWidget {
   });
 
   @override
-  _HeaderCarouselState createState() => _HeaderCarouselState();
+  _CarouselState createState() => _CarouselState();
 }
 
-class _HeaderCarouselState extends State<HeaderCarousel> {
+class _CarouselState extends State<Carousel> {
   @override
   Widget build(BuildContext context) {
     return Column(

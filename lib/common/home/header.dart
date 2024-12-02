@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:movieapp/common/widgets/header_carousel.dart';
+import 'package:movieapp/common/widgets/carousel.dart';
 import 'package:movieapp/feature/movies/model/movie_model.dart';
 
 class Header extends StatefulWidget {
@@ -17,7 +17,7 @@ class _HeaderState extends State<Header> {
 
   @override
   Widget build(BuildContext context) {
-    return HeaderCarousel(
+    return Carousel(
       reelsData: widget.dataMovie,
       controller: _controller,
       current: _current,

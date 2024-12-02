@@ -1,4 +1,5 @@
 import 'package:http/http.dart' as http;
+import 'package:movieapp/core/api.dart';
 import 'dart:convert';
 import 'dart:io';
 
@@ -8,7 +9,7 @@ class ApiService {
   Future<List<MovieModel>> getPopularMovies() async {
     try {
       var response = await http.get(Uri.parse(
-          "https://api.themoviedb.org/3/movie/popular?api_key=c8f1b0d8b95fb5c7e7c29ddd22486d1a&language=en-US&page=1"));
+          "$baseURL/3/movie/popular?api_key=$apiKey&language=en-US&page=1"));
 
       if (response.statusCode == 200) {
         final jsonResponse = json.decode(response.body);

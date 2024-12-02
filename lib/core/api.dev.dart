@@ -1,2 +1,2 @@
-String baseURL = "https://api.themoviedb.org";
-String apiKey = "YOUR API KEY";
+const String baseURL = "https://api.themoviedb.org";
+const String apiKey = "YOUR API KEY";

@@ -50,34 +50,25 @@ class SearchResult extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // Judul film dengan pengaturan overflow dan maxLines
                             Text(
                               movie.title,
                               maxLines: 3,
-                              overflow: TextOverflow
-                                  .ellipsis, // Memotong teks dengan '...'
-                              softWrap:
-                                  true, // Memastikan teks membungkus ke baris berikutnya
+                              overflow: TextOverflow.ellipsis,
+                              softWrap: true,
                               style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                               ),
                             ),
-                            const SizedBox(
-                                height:
-                                    5), // Memberikan jarak antara judul dan tanggal rilis
-                            // Tanggal rilis film
+                            const SizedBox(height: 5),
                             Text(
                               movie.releaseDate,
                               style: TextStyle(
                                 color: Colors.grey,
                               ),
                             ),
-                            const SizedBox(
-                                height:
-                                    5), // Memberikan jarak antara tanggal rilis dan rating
-                            // Rating film dengan ikon bintang
+                            const SizedBox(height: 5),
                             Row(
                               children: [
                                 const Icon(
@@ -85,9 +76,7 @@ class SearchResult extends StatelessWidget {
                                   size: 16,
                                   color: Colors.yellow,
                                 ),
-                                const SizedBox(
-                                    width:
-                                        4), // Memberikan jarak antara ikon bintang dan rating
+                                const SizedBox(width: 4),
                                 Text(
                                   " ${movie.voteAverage}",
                                   style: const TextStyle(
